@@ -2,7 +2,7 @@
   <div class="home table-wrap">
     <!-- vue基于element table表格拖拽 start -->
     <div class="table-box">
-      <h4>element表格：</h4>
+      <h4>vue基于element table表格拖拽：</h4>
       <el-table :data="tableData" border stripe row-key="id" align="left">
         <el-table-column v-for="(item, index) in col" :key="`col_${index}`" :prop="dropCol[index].prop" :label="item.label"></el-table-column>
       </el-table>
@@ -118,7 +118,8 @@ export default {
 <style scoped>
 .table-wrap{width: 900px; margin: 0 auto;}
 .table-box{width: 800px; margin: 0 auto;}
+.table-box h4{text-align: center;}
 .datashow-box{overflow: hidden; zoom: 1;}
-.columndata{float: left;}
-.rowdata{float: right;}
+.datashow-box .columndata{float: left;}
+.datashow-box .rowdata{float: right;}
 </style>
